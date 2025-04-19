@@ -312,11 +312,11 @@ select,  {
 }
 
 #OrderNowButton:hover {
-    background-color: #388e3c;
+    background-color: #388e3c; imfortant!
 }
 
 #OrderNowButton:active {
-    background-color: ##388e3c;
+    background-color: ##388e3c; imfortant!
     transform: scale(0.98);
 }
 
