@@ -307,15 +307,15 @@ select,  {
     color: white;
 }
 
-#OderNowButton {
+#OrderNowButton {
     background-color: #4CAF50; /* Màu xanh lá */
 }
 
-#OderNowButton:hover {
+#OrderNowButton:hover {
     background-color: #388e3c;
 }
 
-#OderNowButton:active {
+#OrderNowButton:active {
     background-color: ##388e3c;
     transform: scale(0.98);
 }
@@ -325,11 +325,11 @@ select,  {
     margin-left: 10px;
 }
 
-#addToCartButton:hover {
+#AddToCartButton:hover {
     background-color: #d12a2a;
 }
 
-#addToCartButton:active {
+#AddToCartButton:active {
     background-color: #b21e1e;
     transform: scale(0.98);
 }
