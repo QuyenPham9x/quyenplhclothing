@@ -1,0 +1,609 @@
+﻿/* ---------------------- TOÀN TRANG ---------------------- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+/* ---------------------- HEADER ---------------------- */
+header {
+    background-color: #222;
+    color: white;
+
+    display: flex;
+   
+    align-items: center;
+}
+
+/* LOGO */
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.logo img {
+    position: absolute;
+    right: 32px;
+    top: 16px;
+}
+
+/* MENU ĐIỀU HƯỚNG */
+nav ul {
+    list-style-type: none;
+
+
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 7.5px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+/* ---------------------- BANNER ---------------------- */
+.banner {
+    background: url('banner.jpg') no-repeat center center;
+    background-size: cover;
+    color: #cccccc;
+    text-align: center;
+}
+
+/* ---------------------- DANH MỤC SẢN PHẨM ---------------------- */
+.product-list {
+    display: flex;
+    justify-content: center;
+ 
+ 
+}
+
+.product {
+    background: none;
+    padding: 15px;
+    text-align: left;
+    width: 180px;
+}
+
+.product img {
+    width: 80%;
+    border-radius: 5px;
+}
+
+.product p,
+.product span {
+    font-size: 12px;
+    font-weight: bold;
+    color: #000;
+}
+
+/* ---------------------- NÚT BUTTON CHUNG ---------------------- */
+button {
+    background-color: #45a049;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+
+}
+
+button:hover {
+    background-color: #e04c2a;
+}
+
+/* ---------------------- THÔNG TIN LIÊN HỆ ---------------------- */
+.contact-info {
+   
+    top: 50px;
+    right: 20px;
+    text-align: right;
+    padding: 0px 31px;
+    font-size: 12px;
+    color: #333;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+/* MẠNG XÃ HỘI */
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icon {
+    color: #000;
+    font-size: 18px;
+    margin-right: 3px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #555;
+}
+
+/* ---------------------- CHI TIẾT SẢN PHẨM ---------------------- */
+.product-detail-page {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 100px 80px 60px;
+    background-color: #fff;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ẢNH THUMBNAIL */
+.product-thumbnails {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.product-thumbnails img {
+    width: 92px;
+    height: auto;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    transition: border 0.3s;
+}
+
+.product-thumbnails img:hover {
+    border: 2px solid #333;
+}
+
+/* ẢNH CHÍNH */
+.product-main-image img {
+    width: 500px;
+    max-height: 700px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+}
+
+/* PHẦN THÔNG TIN SẢN PHẨM */
+.product-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+}
+
+/* Tiêu đề sản phẩm */
+.product-info h1 {
+    font-size: 22px;
+    font-weight: 600;
+    font-style: italic;
+    margin: 2px 0;
+}
+
+/* Mô tả */
+.product-info p {
+    font-size: 18px;
+    color: #222;
+    margin: 4px 0;
+}
+
+/* Giá sản phẩm */
+.price {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 4px 0;
+}
+
+/* Chọn size  */
+select,  {
+    padding: 8px 14px;
+    font-size: 15px;
+    color: black;
+    margin-top: 6px;
+}
+
+/* Số lượng */
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.quantity input {
+    width: 50px;
+    padding: 5px;
+
+}
+
+/* Size */
+.size-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.size-buttons {
+    display: flex;
+    gap: 6px;
+}
+
+.size-buttons button {
+    padding: 8px 14px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+/* Khi chọn một size */
+.size-buttons button.selected {
+    background-color: #f00; /* Nền đỏ khi chọn */
+    color: white;
+    border: 2px solid #f00;
+
+
+}
+
+/* MÀU SẮC */
+.color-options {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    align-items: left;
+}
+
+.color-circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.color-circle.white {
+    background-color: white;
+}
+
+.color-circle.black {
+    background-color: black;
+}
+
+.color-circle:hover {
+    border: 2px solid #555;
+}
+
+.color-row {
+    display: flex;
+    align-items: left;
+    gap: 8px;
+    margin-top: 5px;
+    
+    font-weight: 500;
+}
+
+/* ---------------------- CÁC NÚT "Oder NOW" VÀ "ADD TO CART" ---------------------- */
+
+.product-info.button {
+    padding: 5px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    color: white;
+}
+
+#OderNowButton {
+    background-color: #4CAF50; /* Màu xanh lá */
+}
+
+#OderNowButton:hover {
+    background-color: #388e3c;
+}
+
+#OderNowButton:active {
+    background-color: ##388e3c;
+    transform: scale(0.98);
+}
+
+#addToCartButton {
+    background-color: #e04c2a; /* Màu đỏ */
+    margin-left: 10px;
+}
+
+#addToCartButton:hover {
+    background-color: #d12a2a;
+}
+
+#addToCartButton:active {
+    background-color: #b21e1e;
+    transform: scale(0.98);
+}
+
+/* Đặt 2 nút cạnh nhau */
+.button-container {
+    display: flex;
+ 
+    justify-content: center;
+}
+/* ---------------------- CHI TIẾT VỀ SIZE CHART ---------------------- */
+.size-chart {
+    font-size: 14px;
+    color: #333;
+    
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 3px;
+    margin-top: 10px;
+
+
+
+}
+
+.size-chart th, .size-chart td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.size-chart th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.size-chart td {
+    background-color: #fff;
+}
+
+.size-chart caption {
+    font-size: 5px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #444;
+}
+<style>
+  .size-buttons button.selected {
+    background-color: black;
+    color: white;
+  }
+
+  .color-row,
+  .size-row,
+  .quantity {
+    margin-top: 15px;
+  }
+
+  select,
+  input[type="number"] {
+    padding: 6px;
+    font-size: 14px;
+    width: 100spx;
+  }
+</style>
+
+/* CSS mặc định cho desktop */
+.product-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product {
+    width: 23%;
+}
+
+/* Responsive cho tablet */
+@media (max-width: 768px) {
+    .product {
+        width: 48%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Responsive cho điện thoại */
+@media (max-width: 480px) {
+    .product {
+        width: 100%;
+    }
+
+    header nav ul {
+        display: block;
+        text-align: center;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    .banner img {
+        width: 100%;
+        height: auto;
+    }
+}
+#home.banner {
+    text-align: center;
+}
+
+#home.banner p {
+    font-size: 15px;
+    color: #666;
+    FONT-STYLE: ITALIC;
+
+}
+#home.banner h2 {
+    font-size: 20PX;
+    font-weight: NORMAL;
+    COLOR: #666;
+}
+/* ========================== RESPONSIVE CSS ========================== */
+
+/* --- Tablet (<=768px) --- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+  
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .product {
+        width: 47%;
+    }
+
+    .contact-info {
+
+        text-align: right;
+        margin-top: 10px;
+    }
+
+    .product-detail-page {
+        flex-direction: column;
+        padding: 30px 5%;
+    }
+
+    .product-main-image img {
+        width: 100%;
+        max-height: none;
+    }
+
+    .product-thumbnails {
+        flex-direction: row;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 10px;
+    }
+}
+
+/* --- Mobile (<=480px) --- */
+@media (max-width: 480px) {
+    .logo img {
+      
+        max-width: 60vw;
+        margin-bottom: 5px;
+    }
+
+    .product {
+        width: 100%;
+    }
+
+    .banner img {
+        width: 100%;
+        height: auto;
+    }
+
+    .product-info h1 {
+        font-size: 18px;
+    }
+
+    .product-info p,
+    .price {
+        font-size: 20px;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-thumbnails img {
+        width: 60px;
+    }
+
+    .size-buttons button {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .color-circle {
+        width: 20px;
+        height: 20px;
+    }
+
+    .contact-info {
+ 
+    }
+
+    nav ul li a {
+        font-size: 14px;
+padding-top: 30px;
+    }
+nav ul li a {
+    font-size: 14px;
+    margin-top: 15px; /* chỉ hiệu quả nếu thẻ a là block hoặc inline-block */
+    display: inline-block;
+}
+.product {
+    width: 23%; /* khoảng 4 ảnh trên 1 hàng, có khoảng cách */
+    max-width: 240px;
+    margin-bottom: 20px;
+}
+/* Tablet trở xuống - 2 ảnh */
+@media (max-width: 768px) {
+    .product {
+        width: 48%;
+    }
+}
+
+/* Mobile nhỏ - 1 ảnh mỗi hàng nếu muốn */
+@media (max-width: 480px) {
+    .product {
+        width: 100%;
+    }
+}
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+@media (max-width: 480px) {
+  .size-chart {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+
+}
+@media (max-width: 480px) {
+  .product img {
+    width: 100%;
+  }
+
+
+}
+@media (max-width: 480px) {
+#home.banner h2 {
+    font-size: 16PX;
+    font-weight: NORMAL;
+    COLOR: #666;
+padding-top: 15px;
+}
+@media (max-width: 480px) {
+#home.banner p {
+    font-size: 12px;
+    color: #666;
+    FONT-STYLE: ITALIC;
+}

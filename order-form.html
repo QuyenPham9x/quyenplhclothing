@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quyen Plh Clothing">
+    <title>Quyen Plh Clothing</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="images/logo.png" as="image">
+    <!-- Thêm Font Awesome vào trang -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .order-form-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .product-summary {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .product-summary img {
+      width: 200px;
+      height: auto;
+      object-fit: cover;
+      border: 1px solid #ddd;
+    }
+
+    .product-details {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+    text-align: left;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+align-items: center;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      width: 100%;
+    }
+
+    button {
+      padding: 12px;
+      background-color: black;
+      color: white;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+     
+      border-bottom: 1px solid #ccc;
+    }
+
+
+
+    nav ul li a {
+      text-decoration: none;
+    
+   
+    }
+
+    .logo img {
+    
+    }
+
+    .contact-info {
+      font-size: 13px;
+      line-height: 1.4;
+      color: #555;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #f2f2f2;
+      margin-top: 40px;
+    }
+
+    h1, h2 {
+      margin-bottom: 16px;
+font-size: 22px;
+    }
+@media (max-width: 480px) {
+  .order-form {
+    padding: 16px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+@media (max-width: 480px) {
+  .order-form h1 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .order-form p.description {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  .order-form input,
+  .order-form select,
+  .order-form textarea {
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 480px) {
+  .product-preview img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+}
+@media (max-width: 480px) {
+  .order-form button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    margin-top: 10px;
+  }
+@media (max-width: 480px) {
+.product-summary {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+flex-direction: column;
+    align-items: center;
+}
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="new.html">New</a></li>
+        <li><a href="best.html">Best</a></li>
+        <li><a href="top.html">Top</a></li>
+        <li><a href="botton.html">Botton</a></li>
+        <li><a href="dress.html">Dress</a></li>
+        <li><a href="coat.html">Coat</a></li>
+        <li><a href="acc.html">Acc</a></li>
+      </ul>
+    </nav>
+
+    <div class="logo">
+      <a href="index.html"><img src="images/logo.png" alt="Quyen PLH Logo" /></a>
+    </div>
+
+   
+  </header>
+ <div class="contact-info">
+      <p><i class="fas fa-map-marker-alt"></i> Danang, Vietnam</p>
+      <p><i class="fas fa-clock"></i> Open 8:00-20:00</p>
+      <p><i class="fas fa-calendar-alt"></i> From Monday to Sunday</p>
+    </div>
+  <!-- ===== FORM ĐẶT HÀNG ===== -->
+  <div class="order-form-container">
+    <h1>Xác nhận đơn hàng</h1>
+
+    <div class="product-summary">
+      <img id="productImage" src="" alt="Ảnh sản phẩm" />
+      <div class="product-details">
+        <p><strong>Tên sản phẩm:</strong> <span id="productName"></span></p>
+        <p><strong>Size:</strong> <span id="selectedSize"></span></p>
+        <p><strong>Màu:</strong> <span id="selectedColor"></span></p>
+        <p><strong>Số lượng:</strong> <span id="selectedQuantity"></span></p>
+      </div>
+    </div>
+
+    <form id="orderForm">
+      <h2>Thông tin khách hàng</h2>
+      <input type="text" name="name" placeholder="Họ và tên" required />
+      <input type="tel" name="phone" placeholder="Số điện thoại" required />
+      <textarea name="address" rows="4" placeholder="Địa chỉ nhận hàng" required></textarea>
+  <input type="text" name="email" placeholder="Email" required />
+      <button type="submit">Gửi đơn hàng</button>
+    </form>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2025 Quyen PLH Clothing</p>
+  </footer>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const image = params.get("image");
+  const size = params.get("size");
+  const color = params.get("color");
+  const quantity = params.get("quantity");
+  const productName = params.get("product"); // ✅ lấy tên sản phẩm đúng
+  // Lưu ý: tên KH được điền từ input form nên không cần truyền qua URL
+
+  // Gán thông tin sản phẩm vào giao diện
+  if (image) document.getElementById("productImage").src = image;
+  if (size) document.getElementById("selectedSize").textContent = size;
+  if (color) document.getElementById("selectedColor").textContent = color;
+  if (quantity) document.getElementById("selectedQuantity").textContent = quantity;
+  if (productName) document.getElementById("productName").textContent = productName;
+
+  // Xử lý gửi form
+  const form = document.getElementById('orderForm');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    formData.append("size", size || "-");
+    formData.append("color", color || "-");
+    formData.append("quantity", quantity || "1");
+    formData.append("image", image || "images/new1.jpg");
+    formData.append("productName", productName || "-"); // ✅ Đúng tên sản phẩm
+
+    const data = {};
+    formData.forEach((value, key) => data[key] = value);
+console.log("DỮ LIỆU GỬI:", data);
+
+    try {
+      const res = await fetch("https://script.google.com/macros/s/AKfycbwGJuv4D37MngA-mPdLGCaACajzw4BLzB-eU9mcT_1y0bhJsC4BJOXEU1mZ0MMyesxH/exec", {
+        method: "POST",
+        body: JSON.stringify(data),
+      });
+
+      const result = await res.text();
+      alert("✅ Đơn hàng đã được gửi! Cảm ơn bạn.");
+      form.reset();
+    } catch (err) {
+      alert("❌ Gửi đơn hàng thất bại. Vui lòng thử lại.");
+      console.error(err);
+    }
+  });
+</script>
+
+
+</body>
+</html>

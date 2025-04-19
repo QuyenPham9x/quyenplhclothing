@@ -1,0 +1,376 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quyen Plh Clothing">
+    <title>Quyen Plh Clothing</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="images/logo.png" as="image">
+    <!-- Thêm Font Awesome vào trang -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+
+  <style>
+    /* === STYLE CHI TIẾT SẢN PHẨM === */
+    .product-detail-page {
+      display: flex;
+      gap: 20px;
+      padding: 20px 80px;
+align-items: center;
+    }
+
+ .image-gallery {
+  display: flex;
+  gap: 20px;
+}
+
+.main-image img {
+  width: 400px;
+  object-fit: cover;
+}
+
+.product-thumbnails {
+  display: flex;
+  flex-direction: colum;
+ 
+}
+
+.product-thumbnails img:hover {
+  border: 2px solid #000;
+}
+
+    .product-info {
+      max-width: 400px;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    .product-info h1 {
+      font-size: 20px;
+    }
+
+    .price {
+      font-size: 20px;
+      color: #d12a2a;
+    }
+
+    .size-buttons button {
+      margin-right: 10px;
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      background: white;
+      cursor: pointer;
+    }
+
+    .size-buttons button.selected {
+      background-color: black;
+      color: white;
+      border: 1px solid #000;
+    }
+
+    .add-to-cart {
+      padding: 12px;
+      background-color: black;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    table, th, td {
+      border: 1px solid #ddd;
+      text-align: center;
+      padding: 8px;
+    }
+
+    .button-container {
+      display: flex;
+     
+      margin-top: 10px;
+    }
+
+    .product-details {
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      text-align: left;
+      font-size: 16px;
+    }
+@media (max-width: 480px) {
+  .product-detail-page {
+    flex-direction: column;
+    padding: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .main-image img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .product-thumbnails {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 3px;
+  }
+
+  .product-thumbnails img {
+    width: 80vw;
+    max-width: 80px;
+    height: auto;
+  }
+}
+@media (max-width: 480px) {
+  .product-info {
+    width: 100%;
+    padding-top: 15px;
+  }
+
+  .product-info h1 {
+    font-size: 1.2rem;
+  }
+
+  .price {
+    font-size: 1.3rem;
+  }
+
+  .product-details {
+    font-size: 0.95rem;
+  }
+}
+@media (max-width: 480px) {
+  .size-row,
+  .color-row,
+  .quantity {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    margin-top: 10px;
+  }
+
+  .size-buttons button {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  #quantity {
+    width: 100%;
+    max-width: 100px;
+  }
+}
+@media (max-width: 480px) {
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  #OderNowButton,
+  #addToCartButton {
+    width: 100%;
+    max-width: 280px;
+    margin-left: 10px
+  }
+}
+@media (max-width: 480px) {
+  .image-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-image {
+    order: 1;
+    width: 100%;
+    text-align: center;
+  }
+
+  .main-image img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .product-thumbnails {
+    order: 2;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 12px;
+    width: 100%;
+  }
+
+  .product-thumbnails img {
+    width: 22vw;
+    max-width: 80px;
+    height: auto;
+    border-radius: 4px;
+  }
+}
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="new.html">New</a></li>
+        <li><a href="best.html">Best</a></li>
+        <li><a href="top.html">Top</a></li>
+        <li><a href="botton.html">Botton</a></li>
+        <li><a href="dress.html">Dress</a></li>
+        <li><a href="coat.html">Coat</a></li>
+        <li><a href="acc.html">Acc</a></li>
+      </ul>
+    </nav>
+
+    <div class="logo">
+      <a href="index.html"><img src="images/logo.png" alt="Quyen PLH Logo"></a>
+    </div>
+
+
+  </header>
+    <div class="contact-info">
+      <p><i class="fas fa-map-marker-alt"></i> Danang, Vietnam</p>
+      <p><i class="fas fa-clock"></i> Open 8:00-20:00</p>
+      <p><i class="fas fa-calendar-alt"></i> From Monday to Sunday</p>
+    </div>
+  <!-- ===== CHI TIẾT SẢN PHẨM ===== -->
+  <main class="product-detail-page">
+
+    <!-- Image Gallery -->
+    
+    <div class="image-gallery">
+      <div class="product-thumbnails">
+        <img src="images/detailnew1.jpg" alt="Detail 1" onclick="changeMainImage(this.src)">
+        <img src="images/detailnew2.jpg" alt="Detail 2" onclick="changeMainImage(this.src)">
+        <img src="images/detailnew3.jpg" alt="Detail 3" onclick="changeMainImage(this.src)">
+        <img src="images/detailnew4.jpg" alt="Detail 4" onclick="changeMainImage(this.src)">
+      </div>
+  <div class="main-image">
+        <img id="mainProductImage" src="images/new1.jpg" alt="Ảnh chính sản phẩm">
+      </div>
+    </div>
+
+    <!-- Thông tin sản phẩm -->
+    <div class="product-info">
+      <h1 id="productName">Polka Dot Bubble Dress</h1>
+      <p class="price">595.000</p>
+
+      <!-- Chọn Size -->
+      <div class="size-row">
+        <span>Size:</span>
+        <div class="size-buttons">
+          <button onclick="selectSize(this)">S</button>
+          <button onclick="selectSize(this)">M</button>
+          <button onclick="selectSize(this)">L</button>
+        </div>
+      </div>
+
+      <!-- Chọn Màu -->
+      <div class="color-row">
+        <label for="colorSelect">Color:</label>
+        <select id="colorSelect">
+          <option value="">-- Select Color --</option>
+          <option value="Cream">Cream</option>
+         
+        </select>
+      </div>
+
+      <!-- Chọn số lượng -->
+      <div class="quantity">
+        <span>Quantity:</span>
+        <input type="number" id="quantity" value="1" min="1">
+      </div>
+
+      <!-- Nút hành động -->
+      <div class="button-container">
+        <button id="OderNowButton">Oder Now</button>
+        <button id="addToCartButton">Add To Cart</button>
+      </div>
+
+      <!-- Bảng Size Chart -->
+      <div class="size-chart">
+        <h3>Size Chart</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Size</th>
+              <th>Ngực</th>
+              <th>Eo</th>
+              <th>Mông</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>S</td><td>84</td><td>67</td><td>89</td></tr>
+            <tr><td>M</td><td>88</td><td>71</td><td>93</td></tr>
+            <tr><td>L</td><td>92</td><td>75</td><td>97</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2025 Quyen Plh Clothing</p>
+  </footer>
+
+  <script>
+    let selectedSize = '';
+    let selectedColor = '';
+    let selectedQuantity = 1;
+
+    function selectSize(button) {
+      document.querySelectorAll('.size-buttons button').forEach(btn => btn.classList.remove('selected'));
+      button.classList.add('selected');
+      selectedSize = button.innerText;
+    }
+
+    function changeMainImage(src) {
+      document.getElementById("mainProductImage").src = src;
+    }
+
+    document.getElementById('colorSelect').addEventListener('change', function () {
+      selectedColor = this.value;
+    });
+
+    document.getElementById('quantity').addEventListener('input', function () {
+      selectedQuantity = parseInt(this.value) || 1;
+    });
+
+    document.getElementById('OderNowButton').addEventListener('click', function (event) {
+      event.preventDefault();
+      if (!selectedSize || !selectedColor) {
+        alert("Please select size and color before proceeding.");
+        return;
+      }
+
+      const mainImageSrc = document.getElementById("mainProductImage").src;
+      const productName = document.getElementById("productName").innerText;
+
+      const orderPageUrl = `order-form.html?product=${encodeURIComponent(productName)}&size=${selectedSize}&color=${selectedColor}&quantity=${selectedQuantity}&image=${encodeURIComponent(mainImageSrc)}`;
+
+      window.location.href = orderPageUrl;
+    });
+  </script>
+
+</body>
+</html>
