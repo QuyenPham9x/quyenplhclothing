@@ -285,7 +285,7 @@ select,  {
 }
 
 .color-row {
-    display: flex;
+  
     align-items: left;
     gap: 8px;
     margin-top: 5px;
